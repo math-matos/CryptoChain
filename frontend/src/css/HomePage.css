@@ -1,0 +1,157 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Onest, Onest Placeholder, sans-serif;
+  color: #000;
+
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 70%,
+      #f9f9f9 100%
+    ),
+    url("../assets/bg-img.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 10rem 10px 10rem;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #898ca9;
+}
+
+/* Features Section */
+.features {
+  padding: 80px 20px;
+  text-align: center;
+
+  /* background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 70%,
+        #f9f9f9 100%
+      )
+      top/100% 50% no-repeat,
+    linear-gradient(to top, rgba(255, 255, 255, 0) 70%, #f9f9f9 100%)
+      bottom/100% 50% no-repeat,
+    url("../assets/Background.png") center center/cover no-repeat; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.features h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: white
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature {
+  flex: 1;
+  max-width: 300px;
+  margin: 20px;
+}
+
+.feature h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Pricing Section */
+.pricing {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.pricing-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.pricing-option {
+  flex: 1;
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 1rem;
+
+  background-color: rgba(26, 27, 35, 1); 
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.pricing-option h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white
+}
+
+.pricing-option p {
+  font-size: 16px;
+  color: #898CA9;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0) 70%, #f9f9f9 100%),
+    url("../assets/Background.png") no-repeat center center;
+  background-size: cover;
+  color: black;
+}
