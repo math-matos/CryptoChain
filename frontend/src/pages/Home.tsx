@@ -1,17 +1,12 @@
 import Header from "../components/Header";
 
-import "../css/HomePage.css";
-import {
-  Avatar,
-  Box,
-  Button,
-  Chip,
-  Grid2,
-  Stack,
-  Typography
-} from "@mui/material";
+import trade from "../assets/trade.png";
+import wallet from "../assets/wallet.png";
 
-import { FaArrowRightLong } from "react-icons/fa6";
+import "../css/HomePage.css";
+import { Box, Button, Grid2, Stack, Typography } from "@mui/material";
+
+import { FaArrowRightLong, FaBitcoinSign } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -41,18 +36,12 @@ export default function Home() {
                       <Typography variant="subtitle1">+500</Typography>
                     </Box>
                   </Box> */}
-              <Chip
-                label="Super feature coming soon"
-                style={{
-                  backgroundColor: "#FFED9E",
-                  color: "#DB6E00",
-                  fontWeight: 600,
-                  marginBottom: 20
-                }}
-              />
             </Grid2>
           </Grid2>
-          <Typography variant="h1" fontWeight={600} style={{ color: "white" }}>
+          <Typography
+            variant="h1"
+            fontWeight={600}
+            style={{ color: "white", paddingTop: 50 }}>
             Criptomoedas de <br /> forma clara e simples
           </Typography>
           <Typography mt={2}>
@@ -75,7 +64,8 @@ export default function Home() {
                 borderRadius: "1rem",
                 padding: "0 2rem 0 2rem",
                 width: "10%",
-                margin: "1rem"
+                margin: "1rem",
+                fontWeight: 600
               }}>
               Comece aqui
             </Button>
@@ -84,57 +74,33 @@ export default function Home() {
 
         {/* About the project Section */}
         <section id="features" className="features">
-          <h2>About the project</h2>
           <div className="feature-list">
-            <div className="pricing-option">
-              <h3>AI-Powered Content Generation</h3>
-              <Typography align="left" mt={1} mb={1}>
-                Generate articles, blog posts, and creative content with ease
-                using our AI-driven tools.
+            <div className="pricing-option" style={{ maxWidth: "400px" }}>
+              <img src={trade} />
+              <h3>Plataforma de Trade</h3>
+              <Typography align="center" mt={1} mb={1}>
+                Invista em criptomoedas a qualquer hora, em qualquer lugar, com
+                nossa plataforma on-line segura, protegida e fácil de usar
               </Typography>
-              <img
-                src="https://www.testingcatalog.com/content/images/size/w2000/2024/02/photo_2024-02-10_20-48-19.jpg"
-                style={{ width: "350px", marginTop: 2, borderRadius: "2rem" }}
-              />
-            </div>
-
-            <div className="pricing-option">
-              <h3>Personalized Assistance</h3>
-              <Typography align="left" mt={1} mb={1}>
-                Get personalized AI suggestions and assistance tailored to your
-                needs.
-              </Typography>
-              <img
-                src="https://uploads.jovemnerd.com.br/wp-content/uploads/2022/12/animes_mais_aguardados_do_ano__2o6g5y62m.jpg"
-                style={{
-                  width: "350px",
-                  minHeight: "12rem",
-                  marginTop: 2,
-                  borderRadius: "2rem"
-                }}
-              />
               <a href="/signup">
-                <Typography fontWeight={600} style={{ color: "#B982FF" }}>
+                <Typography fontWeight={600} m={3} style={{ color: "#B982FF" }}>
                   Comece aqui <FaArrowRightLong />
                 </Typography>
               </a>
             </div>
 
-            <div className="pricing-option">
-              <h3>Workflow Integration</h3>
-              <Typography align="left" mt={1} mb={1}>
-                Integrate with your existing tools and workflows to maximize
-                efficiency.
+            <div className="pricing-option" style={{ maxWidth: "400px" }}>
+              <img src={wallet} />
+              <h3>Carteira CryptoChain</h3>
+              <Typography align="center" mt={1} mb={1}>
+                Store your growing investments in our non-custodial wallet that
+                gives you access to a full suite of DeFi services in one place
               </Typography>
-              <img
-                src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABc_IAP39hj-kZ8BSec3IQ3zMRFLQvuxISsTH0WbVmISwOd7_gNPUA19gEwg5EkWJFdPrVyeOrDxhCFi08qjHYzABVNdsJHmlQjpw.jpg?r=920"
-                style={{
-                  width: "350px",
-                  minHeight: "12rem",
-                  marginTop: 2,
-                  borderRadius: "2rem"
-                }}
-              />
+              <a href="/signup">
+                <Typography fontWeight={600} m={3} style={{ color: "#B982FF" }}>
+                  Comece aqui <FaArrowRightLong />
+                </Typography>
+              </a>
             </div>
           </div>
         </section>
@@ -160,24 +126,110 @@ export default function Home() {
           </a>
           <div className="pricing-list">
             <div className="pricing-option">
-              <h3>Free Plan</h3>
-              <Typography
-                align="left"
-                fontWeight={800}
-                style={{ fontSize: 50, color: "white" }}>
-                $0
-              </Typography>
-              <Typography align="left" mt={1} mb={1}>
-                Basic features to get you started with AI-generated content.
-              </Typography>
-              <Typography align="left">✅ 1000 requests</Typography>
-              <Typography align="left">✅ Suport by Author</Typography>
-              <Typography align="left" mb={2}>
-                ✅ Imaginary feature
-              </Typography>
-              <Button variant="outlined" href="/chat" fullWidth>
-                GET STARTED
-              </Button>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  padding: "10px",
+                  borderBottom: "1px solid #2B2C3B"
+                }}>
+                <FaBitcoinSign />
+                <Typography fontWeight={600} style={{ color: "white" }}>
+                  Bitcoin
+                </Typography>
+                $26,500.00
+                <Typography fontWeight={600} style={{ color: "#0DBB7C" }}>
+                  +1.68%
+                </Typography>
+                <a href="/">
+                  Compre Agora <FaArrowRightLong />
+                </a>
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  padding: "10px",
+                  borderBottom: "1px solid #2B2C3B"
+                }}>
+                <FaBitcoinSign />
+                <Typography fontWeight={600} style={{ color: "white" }}>
+                  Bitcoin
+                </Typography>
+                $26,500.00
+                <Typography fontWeight={600} style={{ color: "#0DBB7C" }}>
+                  +1.68%
+                </Typography>
+                <a href="/">
+                  Compre Agora <FaArrowRightLong />
+                </a>
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  padding: "10px",
+                  borderBottom: "1px solid #2B2C3B"
+                }}>
+                <FaBitcoinSign />
+                <Typography fontWeight={600} style={{ color: "white" }}>
+                  Bitcoin
+                </Typography>
+                $26,500.00
+                <Typography fontWeight={600} style={{ color: "#0DBB7C" }}>
+                  +1.68%
+                </Typography>
+                <a href="/">
+                  Compre Agora <FaArrowRightLong />
+                </a>
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  padding: "10px",
+                  borderBottom: "1px solid #2B2C3B"
+                }}>
+                <FaBitcoinSign />
+                <Typography fontWeight={600} style={{ color: "white" }}>
+                  Bitcoin
+                </Typography>
+                $26,500.00
+                <Typography fontWeight={600} style={{ color: "#0DBB7C" }}>
+                  +1.68%
+                </Typography>
+                <a href="/">
+                  Compre Agora <FaArrowRightLong />
+                </a>
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  padding: "10px",
+                  borderBottom: "1px solid #2B2C3B"
+                }}>
+                <FaBitcoinSign />
+                <Typography fontWeight={600} style={{ color: "white" }}>
+                  Bitcoin
+                </Typography>
+                $26,500.00
+                <Typography fontWeight={600} style={{ color: "#0DBB7C" }}>
+                  +1.68%
+                </Typography>
+                <a href="/">
+                  Compre Agora <FaArrowRightLong />
+                </a>
+              </div>
             </div>
           </div>
         </section>

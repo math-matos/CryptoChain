@@ -4,7 +4,9 @@ export default function Header() {
   return (
     <header className="navbar">
       <div className="logo">
-        <h2>CryptoChain</h2>
+        <a href="/">
+          <h2 style={{color: "white"}}>CryptoChain</h2>
+        </a>
       </div>
       <nav className="nav-links">
         <a href="#features">Compre / Venda</a>
@@ -14,13 +16,23 @@ export default function Header() {
         <Button
           variant="outlined"
           href="/chat"
-          style={{ color: "white", height: "3rem", borderColor: "white", borderRadius: '1rem' }}>
+          style={{
+            color: "white",
+            height: "3rem",
+            borderColor: "white",
+            borderRadius: "1rem"
+          }}>
           Cadastre-se
         </Button>
         <Button
           variant="contained"
           href="/chat"
-          style={{ color: "white", height: "3rem", borderRadius: '1rem', padding: '0 2rem 0 2rem' }}>
+          style={{
+            color: "white",
+            height: "3rem",
+            borderRadius: "1rem",
+            padding: "0 2rem 0 2rem"
+          }}>
           Entrar
         </Button>
       </nav>

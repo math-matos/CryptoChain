@@ -6,12 +6,7 @@ html {
   font-family: Onest, Onest Placeholder, sans-serif;
   color: #000;
 
-  background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0) 70%,
-      #f9f9f9 100%
-    ),
-    url("../assets/bg-img.png");
+  background: url("../assets/bg-img.png");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,6 +43,7 @@ html {
 /* Hero Section */
 .hero {
   text-align: center;
+  padding-top: 7rem;
 }
 
 .hero p {
@@ -58,18 +54,11 @@ html {
 
 /* Features Section */
 .features {
-  padding: 80px 20px;
+  padding: 330px 20px 0 0;
   text-align: center;
 
-  /* background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0) 70%,
-        #f9f9f9 100%
-      )
-      top/100% 50% no-repeat,
-    linear-gradient(to top, rgba(255, 255, 255, 0) 70%, #f9f9f9 100%)
-      bottom/100% 50% no-repeat,
-    url("../assets/Background.png") center center/cover no-repeat; */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, #111 100%),
+    url("../assets/bg-gradient-img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -78,12 +67,13 @@ html {
 .features h2 {
   font-size: 36px;
   margin-bottom: 40px;
-  color: white
+  color: white;
 }
 
 .feature-list {
+  margin-top: 2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -106,7 +96,7 @@ html {
 
 /* Pricing Section */
 .pricing {
-  padding: 80px 20px;
+  padding: 120px 20px;
   text-align: center;
 }
 
@@ -118,25 +108,32 @@ html {
 
 .pricing-option {
   flex: 1;
-  max-width: 400px;
+  max-width: 100vh;
   margin: 20px;
   padding: 20px;
   border-radius: 1rem;
+  color: white;
+  font-weight: 600;
 
-  background-color: rgba(26, 27, 35, 1); 
+  background-color: rgba(26, 27, 35, 1);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 
 .pricing-option h3 {
-  font-size: 24px;
+  font-size: 32px;
   margin-bottom: 20px;
-  color: white
+  color: white;
 }
 
 .pricing-option p {
   font-size: 16px;
-  color: #898CA9;
+  color: #898ca9;
+}
+
+.pricing-option a {
+  color: white;
+  font-weight: 600;
 }
 
 .price {
