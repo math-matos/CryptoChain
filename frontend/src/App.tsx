@@ -1,15 +1,15 @@
-import './App.css'
-import Component from './Component'
-import Home from './pages/Home'
+import { BrowserRouter } from "react-router-dom";
+import Router from "./routes/Router";
+import "./App.css";
 
 function App() {
-
   return (
     <>
-    <Home/>
-    {/* <Component/> */}
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
