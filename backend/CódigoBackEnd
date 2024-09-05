@@ -1,0 +1,115 @@
+class Usuario:
+    def __init__(self, nome, email, senha):
+        self.__nome = nome
+        self.__email = email
+        self.__senha = senha
+
+    @property
+    def nome(self):
+        return self.__nome
+
+    @property
+    def email(self):
+        return self.__email
+
+    def verificar_senha(self, senha):
+        return self.__senha == senha
+
+class Conta:
+    def __init__(self, numeroConta, saldo, tipoMoeda):
+        self.__numeroConta = numeroConta
+        self.__saldo = saldo
+        self.__tipoMoeda = tipoMoeda
+
+    @property
+    def numeroConta(self):
+        return self.__numeroConta
+
+    @property
+    def saldo(self):
+        return self.__saldo
+
+    @property
+    def tipoMoeda(self):
+        return self.__tipoMoeda
+
+    def adicionarSaldo(self, valor):
+        self.__saldo += valor
+
+    def retirarSaldo(self, valor):
+        if self.__saldo >= valor:
+            self.__saldo -= valor
+        else:
+            print("Saldo insuficiente.")
+
+class ContaInvestimento(Conta):
+    def __init__(self, numeroConta, saldo, tipoMoeda):
+        super().__init__(numeroConta, saldo, tipoMoeda)
+        self.__transacoes = []
+
+    @property
+    def transacoes(self):
+        return self.__transacoes
+
+    def realizarTransacao(self, tipo, montante, data):
+        self.__transacoes.append(Transacao(tipo, montante, data))
+
+class Transacao:
+    def __init__(self, tipo, montante, data):
+        self.__tipo = tipo
+        self.__montante = montante
+        self.__data = data
+
+    @property
+    def tipo(self):
+        return self.__tipo
+
+    @property
+    def montante(self):
+        return self.__montante
+
+    @property
+    def data(self):
+        return self.__data
+
+class Ativo:
+    def __init__(self, nome, codigo, precoAtual):
+        self.__nome = nome
+        self.__codigo = codigo
+        self.__precoAtual = precoAtual
+
+    @property
+    def nome(self):
+        return self.__nome
+
+    @property
+    def codigo(self):
+        return self.__codigo
+
+    @property
+    def precoAtual(self):
+        return self.__precoAtual
+
+# Exemplo de uso:
+if __name__ == "__main__":
+    # Criar um usuário
+    user = Usuario("John Doe", "john@example.com", "senha")
+
+    # Criar uma conta de investimento
+    investment_account = ContaInvestimento("12345", 10000.0, "USD")
+
+    # Adicionar e retirar fundos
+    investment_account.adicionarSaldo(500.0)
+    investment_account.retirarSaldo(200.0)
+
+    # Realizar uma transação
+    investment_account.realizarTransacao("Compra", 1000.0, "2024-06-21")
+
+    # Criar um ativo
+    asset = Ativo("Ação", "AAPL", 150.0)
+
+    # Imprimir detalhes da conta
+    print(f"Usuário: {user.nome}, Email: {user.email}")
+    print(f"Conta: {investment_account.numeroConta}, Saldo: {investment_account.saldo}")
+    print(f"Transação recente: {investment_account.transacoes[-1].tipo}, Montante: {investment_account.transacoes[-1].montante}, Data: {investment_account.transacoes[-1].data}")
+    print(f"Ativo: {asset.nome}, Código: {asset.codigo}, Preço: {asset.precoAtual}")
