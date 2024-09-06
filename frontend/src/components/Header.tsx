@@ -26,7 +26,7 @@ export default function Header() {
         </Button>
         <Button
           variant="contained"
-          href="/chat"
+          href="/login"
           style={{
             color: "white",
             height: "3rem",

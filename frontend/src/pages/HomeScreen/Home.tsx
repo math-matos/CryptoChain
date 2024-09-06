@@ -1,12 +1,13 @@
-import Header from "../components/Header";
+import Header from "../../components/Header";
 
-import trade from "../assets/trade.png";
-import wallet from "../assets/wallet.png";
+import trade from "../../assets/trade.png";
+import wallet from "../../assets/wallet.png";
 
-import "../css/HomePage.css";
+import "./HomePage.css";
 import { Box, Button, Grid2, Stack, Typography } from "@mui/material";
 
-import { FaArrowRightLong, FaBitcoinSign } from "react-icons/fa6";
+import { FaArrowRightLong, FaBitcoinSign, FaEthereum } from "react-icons/fa6";
+import { SiCardano, SiPolkadot } from "react-icons/si";
 
 export default function Home() {
   return (
@@ -138,7 +139,10 @@ export default function Home() {
                 <Typography fontWeight={600} style={{ color: "white" }}>
                   Bitcoin
                 </Typography>
-                $26,500.00
+                <Typography fontWeight={600} style={{ color: "#B982FF" }}>
+                  BTC
+                </Typography>
+                $56.750,65
                 <Typography fontWeight={600} style={{ color: "#0DBB7C" }}>
                   +1.68%
                 </Typography>
@@ -155,13 +159,40 @@ export default function Home() {
                   padding: "10px",
                   borderBottom: "1px solid #2B2C3B"
                 }}>
-                <FaBitcoinSign />
+                <FaEthereum />
                 <Typography fontWeight={600} style={{ color: "white" }}>
-                  Bitcoin
+                  Ethereum
                 </Typography>
-                $26,500.00
+                <Typography fontWeight={600} style={{ color: "#B982FF" }}>
+                  ETH
+                </Typography>
+                $2.390,01
                 <Typography fontWeight={600} style={{ color: "#0DBB7C" }}>
-                  +1.68%
+                  +4.36%
+                </Typography>
+                <a href="/">
+                  Compre Agora <FaArrowRightLong />
+                </a>
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  padding: "10px",
+                  borderBottom: "1px solid #2B2C3B"
+                }}>
+                <SiCardano />
+                <Typography fontWeight={600} style={{ color: "white" }}>
+                  Cardano
+                </Typography>
+                <Typography fontWeight={600} style={{ color: "#B982FF" }}>
+                  ADA
+                </Typography>
+                $1.88
+                <Typography fontWeight={600} style={{ color: "#0DBB7C" }}>
+                  +3.43%
                 </Typography>
                 <a href="/">
                   Compre Agora <FaArrowRightLong />
@@ -178,32 +209,14 @@ export default function Home() {
                 }}>
                 <FaBitcoinSign />
                 <Typography fontWeight={600} style={{ color: "white" }}>
-                  Bitcoin
+                  Wax
                 </Typography>
-                $26,500.00
-                <Typography fontWeight={600} style={{ color: "#0DBB7C" }}>
-                  +1.68%
+                <Typography fontWeight={600} style={{ color: "#B982FF" }}>
+                  WAXP
                 </Typography>
-                <a href="/">
-                  Compre Agora <FaArrowRightLong />
-                </a>
-              </div>
-
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "10px",
-                  borderBottom: "1px solid #2B2C3B"
-                }}>
-                <FaBitcoinSign />
-                <Typography fontWeight={600} style={{ color: "white" }}>
-                  Bitcoin
-                </Typography>
-                $26,500.00
-                <Typography fontWeight={600} style={{ color: "#0DBB7C" }}>
-                  +1.68%
+                $1.02
+                <Typography fontWeight={600} style={{ color: "#bb0d0d" }}>
+                  -2.62%
                 </Typography>
                 <a href="/">
                   Compre Agora <FaArrowRightLong />
@@ -215,16 +228,18 @@ export default function Home() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  padding: "10px",
-                  borderBottom: "1px solid #2B2C3B"
+                  padding: "10px"
                 }}>
-                <FaBitcoinSign />
+                <SiPolkadot />
                 <Typography fontWeight={600} style={{ color: "white" }}>
-                  Bitcoin
+                  Polkadot
                 </Typography>
-                $26,500.00
+                <Typography fontWeight={600} style={{ color: "#B982FF" }}>
+                  DOT
+                </Typography>
+                $42.23
                 <Typography fontWeight={600} style={{ color: "#0DBB7C" }}>
-                  +1.68%
+                  +7.56%
                 </Typography>
                 <a href="/">
                   Compre Agora <FaArrowRightLong />
@@ -242,7 +257,8 @@ export default function Home() {
             justifyContent="center"
             gap={2}>
             <p>
-              &copy; {new Date().getFullYear()} Craft Desk. All rights reserved.
+              &copy; {new Date().getFullYear()} CryptoChain. All rights
+              reserved.
             </p>
             <p>Have questions? Get in touch with our team!</p>
             <a href="mailto:contatomathmatos@gmail.com">
