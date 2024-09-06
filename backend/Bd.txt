@@ -1,0 +1,42 @@
+-- Criação da tabela Usuario
+CREATE TABLE Usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(100) NOT NULL
+);
+
+-- Criação da tabela Conta
+CREATE TABLE Conta (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    numeroConta VARCHAR(20) NOT NULL UNIQUE,
+    saldo DECIMAL(15, 2) NOT NULL,
+    tipoMoeda VARCHAR(10) NOT NULL,
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id)
+);
+
+-- Criação da tabela ContaInvestimento
+CREATE TABLE ContaInvestimento (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    conta_id INT,
+    FOREIGN KEY (conta_id) REFERENCES Conta(id)
+);
+
+-- Criação da tabela Transacao
+CREATE TABLE Transacao (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tipo VARCHAR(50) NOT NULL,
+    montante DECIMAL(15, 2) NOT NULL,
+    data DATE NOT NULL,
+    contaInvestimento_id INT,
+    FOREIGN KEY (contaInvestimento_id) REFERENCES ContaInvestimento(id)
+);
+
+-- Criação da tabela Ativo
+CREATE TABLE Ativo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    codigo VARCHAR(10) NOT NULL UNIQUE,
+    precoAtual DECIMAL(15, 2) NOT NULL
+);
