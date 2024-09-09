@@ -1,6 +1,7 @@
 const uris = {
   login: "/login",
-  home: "/"
+  home: "/",
+  account: "/account"
 };
 
 export default uris;

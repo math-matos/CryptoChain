@@ -5,17 +5,18 @@ html {
   padding: 0;
   font-family: Onest, Onest Placeholder, sans-serif;
   color: #000;
-
-  background: url("../../assets/bg-img.png");
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.bg-login {
+  background: url("../../assets/green-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Navbar */
@@ -25,6 +26,10 @@ html {
   align-items: center;
   width: 100%;
   padding: 10px 10rem 10px 10rem;
+
+  background: url("../../assets/bg-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .logo {
@@ -44,6 +49,12 @@ html {
 .hero {
   text-align: center;
   padding-top: 7rem;
+
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, #111 100%),
+    url("../../assets/bg-img.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero p {

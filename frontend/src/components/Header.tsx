@@ -5,7 +5,7 @@ export default function Header() {
     <header className="navbar">
       <div className="logo">
         <a href="/">
-          <h2 style={{color: "white"}}>CryptoChain</h2>
+          <h2 style={{ color: "white" }}>CryptoChain</h2>
         </a>
       </div>
       <nav className="nav-links">
