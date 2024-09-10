@@ -28,7 +28,7 @@ export default function AccountScreen() {
   };
 
   return (
-    <>
+    <div className="bg-login">
       <Header />
       <div style={styles.container}>
         <div style={styles.card}>
@@ -200,7 +200,7 @@ export default function AccountScreen() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
