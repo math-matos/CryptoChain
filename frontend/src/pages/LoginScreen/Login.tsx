@@ -44,7 +44,7 @@ export default function Login() {
           display: "flex",
           alignItems: "center"
         }}>
-        <Header />
+        <Header showLoginButtons={true} />
         <Typography fontSize={"30px"} fontWeight={600} mt={"137px"}>
           Olá, Bem-vindo(a)!👋🏻
         </Typography>

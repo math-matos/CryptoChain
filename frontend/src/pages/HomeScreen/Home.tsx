@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <div className="container">
-        <Header />
+        <Header showLoginButtons={true} />
 
         {/* Hero Section */}
         <section className="hero">

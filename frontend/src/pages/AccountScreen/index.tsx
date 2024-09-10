@@ -29,7 +29,7 @@ export default function AccountScreen() {
 
   return (
     <div className="bg-login">
-      <Header />
+      <Header showLoginButtons={false} />
       <div style={styles.container}>
         <div style={styles.card}>
           <Stack>
